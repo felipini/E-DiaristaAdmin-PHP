@@ -21,11 +21,11 @@
                         <label for="icone">Ícone</label>
                         <select name="icone" id="icone" class="form-control" required>
                             <option value="">Selecione um Ícone</option>
-                            <option value="twf-cleaning-1" {{ isset($servico) && $servico->icone === 'twf-cleaning-1' ?
+                            <option value="twf-cleaning-1" {{ old('icone', isset($servico) && $servico->icone) === 'twf-cleaning-1' ?
                                 'selected' : '' }}>Ícone 1</option>
-                            <option value="twf-cleaning-1" {{ isset($servico) && $servico->icone === 'twf-cleaning-2' ?
+                            <option value="twf-cleaning-2" {{ old('icone', isset($servico) && $servico->icone) === 'twf-cleaning-2' ?
                                 'selected' : '' }}>Ícone 2</option>
-                            <option value="twf-cleaning-1" {{ isset($servico) && $servico->icone === 'twf-cleaning-3' ?
+                            <option value="twf-cleaning-3" {{ old('icone', isset($servico) && $servico->icone) === 'twf-cleaning-3' ?
                                 'selected' : '' }}>Ícone 3</option>
                         </select>
                     </div>
@@ -34,7 +34,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="posicao">Posição na Plataforma</label>
-                        <input type="input" value="{{ $servico->posicao ?? '' }}" class="form-control" name="posicao"
+                        <input type="input" value="{{ old('posicao', $servico->posicao ?? '') }}" class="form-control" name="posicao"
                             id="posica" required>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="valor_minimo">Valor Mínimo</label>
-                        <input type="inpput" value="{{ $servico->valor_minimo ?? '' }}" class="form-control"
+                        <input type="inpput" value="{{ old('valor_minimo', $servico->valor_minimo ?? '') }}" class="form-control"
                             name="valor_minimo" id="valor_minimo" required>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="quantidade_horas">Quantidade Mínima de horas</label>
-                        <input type="input" value="{{ $servico->quantidade_horas ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('quantidade_horas', $servico->quantidade_horas ?? '') }}" class="form-control"
                             name="quantidade_horas" id="quantidade_horas" required>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="porcentagem">Porcetagem Comissão</label>
-                        <input type="input" value="{{ $servico->porcentagem ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('porcentagem', $servico->porcentagem ?? '') }}" class="form-control"
                             name="porcentagem" id="porcentagem" required>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="valor_quarto">Valor Quarto</label>
-                        <input type="input" value="{{ $servico->valor_quarto ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('valor_quarto', $servico->valor_quarto ?? '') }}" class="form-control"
                             name="valor_quarto" id="valor_quarto">
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="horas_quarto">Quantidade Quarto</label>
-                        <input type="input" value="{{ $servico->horas_quarto ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('horas_quarto', $servico->horas_quarto ?? '') }}" class="form-control"
                             name="horas_quarto" id="horas_quarto">
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="valor_sala">Valor Sala</label>
-                        <input type="input" value="{{ $servico->valor_sala ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('valor_sala', $servico->valor_sala ?? '') }}" class="form-control"
                             name="valor_sala" id="valor_sala">
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="horas_sala">Quantidade Sala</label>
-                        <input type="input" value="{{ $servico->horas_sala ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('horas_sala', $servico->horas_sala ?? '') }}" class="form-control"
                             name="horas_sala" id="horas_sala">
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="valor_banheiro">Valor Banheiro</label>
-                        <input type="input" value="{{ $servico->valor_banheiro ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('valor_banheiro', $servico->valor_banheiro ?? '') }}" class="form-control"
                             name="valor_banheiro" id="valor_banheiro">
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="horas_banheiro">Quantidade Banheiro</label>
-                        <input type="input" value="{{ $servico->horas_banheiro ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('horas_banheiro', $servico->horas_banheiro ?? '') }}" class="form-control"
                             name="horas_banheiro" id="horas_banheiro">
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="valor_cozinha">Valor Cozinha</label>
-                        <input type="input" value="{{ $servico->valor_cozinha ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('valor_cozinha', $servico->valor_cozinha ?? '') }}" class="form-control"
                             name="valor_cozinha" id="valor_cozinha">
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="horas_cozinha">Quantidade Cozinha</label>
-                        <input type="input" value="{{ $servico->horas_cozinha ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('horas_cozinha', $servico->horas_cozinha ?? '') }}" class="form-control"
                             name="horas_cozinha" id="horas_cozinha">
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="valor_quintal">Valor Quintal</label>
-                        <input type="input" value="{{ $servico->valor_quintal ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('valor_quintal', $servico->valor_quintal ?? '') }}" class="form-control"
                             name="valor_quintal" id="valor_quintal">
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="horas_quintal">Quantidade Quintal</label>
-                        <input type="input" value="{{ $servico->horas_quintal ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('horas_quintal', $servico->horas_quintal ?? '') }}" class="form-control"
                             name="horas_quintal" id="horas_quintal">
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="valor_outros">Valor Outros Cômodos</label>
-                        <input type="input" value="{{ $servico->valor_outros ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('valor_outros', $servico->valor_outros ?? '') }}" class="form-control"
                             name="valor_outros" id="valor_outros">
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="horas_outros">Qtde Outros Cômodos</label>
-                        <input type="input" value="{{ $servico->horas_outros ?? '' }}" class="form-control"
+                        <input type="input" value="{{ old('horas_outros', $servico->horas_outros ?? '') }}" class="form-control"
                             name="horas_outros" id="horas_outros">
                     </div>
                 </div>
