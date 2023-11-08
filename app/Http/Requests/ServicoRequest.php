@@ -28,7 +28,7 @@ class ServicoRequest extends FormRequest
             'posicao' => ['required', 'integer'],
             'valor_minimo' => ['required', 'numeric'],
             'quantidade_horas' => ['required', 'integer'],
-            'porcentagem' => ['required', 'integer'],
+            'porcentagem' => ['required', 'numeric'],
             'valor_quarto' => ['numeric'],
             'horas_quarto' => ['integer'],
             'valor_sala' => ['numeric'],
