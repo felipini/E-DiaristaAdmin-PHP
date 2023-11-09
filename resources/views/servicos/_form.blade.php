@@ -21,12 +21,12 @@
                         <label for="icone">Ícone</label>
                         <select name="icone" id="icone" class="form-control" required>
                             <option value="">Selecione um Ícone</option>
-                            <option value="twf-cleaning-1" {{ old('icone', isset($servico) && $servico->icone === 'twf-cleaning-1' ?
-                                'selected' : '') }}>Ícone 1</option>
-                            <option value="twf-cleaning-2" {{ old('icone', isset($servico) && $servico->icone === 'twf-cleaning-2' ?
-                                'selected' : '') }}>Ícone 2</option>
-                            <option value="twf-cleaning-3" {{ old('icone', isset($servico) && $servico->icone === 'twf-cleaning-3' ?
-                                'selected' : '') }}>Ícone 3</option>
+                            <option value="twf-cleaning-1" {{ old('icone', $servico->icone ?? '') === 'twf-cleaning-1' ?
+                                'selected' : '' }}>Ícone 1</option>
+                            <option value="twf-cleaning-2" {{ old('icone', $servico->icone ?? '') === 'twf-cleaning-2' ?
+                                'selected' : '' }}>Ícone 2</option>
+                            <option value="twf-cleaning-3" {{ old('icone', $servico->icone ?? '') === 'twf-cleaning-3' ?
+                                'selected' : '' }}>Ícone 3</option>
                         </select>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Salvar</button>
-                    <button type="button" class="btn btn-secondary">Voltar</button>
+                    <a href="{{ route('servicos.index') }}" class="btn btn-secondary">Voltar</a>
                 </div>
             </div>
         </div>

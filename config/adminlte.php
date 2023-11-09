@@ -345,6 +345,22 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => 'Cadastro de Usuários',
+            'icon'    => 'fas fa-fw fa-user',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'route'  => 'usuarios.index',
+                    'icon'    => 'fas fa-fw fa-list',
+                ],
+                [
+                    'text' => 'Cadastrar',
+                    'route'  => 'usuarios.create',
+                    'icon'    => 'fas fa-fw fa-file',
+                ],
+            ],
+        ],
        /*  ['header' => 'labels'],
         [
             'text'       => 'important',

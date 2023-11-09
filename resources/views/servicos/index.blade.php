@@ -12,6 +12,8 @@
 @stop
 
 @section('content')
+@include('_mensagens_sessao')
+
 <div class="card">
    <table class="table table-striped table-hover">
 
