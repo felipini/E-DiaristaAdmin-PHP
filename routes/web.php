@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\ServicoController;
+use App\Http\Controllers\ImovelController;
+use App\Http\Controllers\TipoController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,10 @@ Route::middleware('auth')->group(function(){
     //Rotas para manipulação de Usuarios
     Route::resource('usuarios', UsuarioController::class);
 
-    //Rotas para manipulação de Serviços
-    Route::resource('servicos', ServicoController::class);
+    //Rotas para manipulação de Tipo de Imoveis
+    Route::resource('tipos', TipoController::class);
+
+     //Rotas para manipulação de Imovels
+     Route::resource('imovels', ImovelController::class);
+
 });

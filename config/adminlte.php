@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'E-Diaristas',
+    'title' => 'Cartório',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -68,7 +68,7 @@ return [
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'E-Diaristas',
+    'logo_img_alt' => 'Cartorio',
 
     /*
     |--------------------------------------------------------------------------
@@ -330,17 +330,33 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ], */
         [
-            'text'    => 'Cadastro de Serviços',
+            'text'    => 'Cadastro de Imóvel',
             'icon'    => 'fas fa-fw fa-broom',
             'submenu' => [
                 [
                     'text' => 'Listar',
-                    'route'  => 'servicos.index',
+                    'route'  => 'imovels.index',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
                     'text' => 'Cadastrar',
-                    'route'  => 'servicos.create',
+                    'route'  => 'imovels.create',
+                    'icon'    => 'fas fa-fw fa-file',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Cadastro de Tipos de Imóvel',
+            'icon'    => 'fas fa-fw fa-broom',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'route'  => 'tipos.index',
+                    'icon'    => 'fas fa-fw fa-list',
+                ],
+                [
+                    'text' => 'Cadastrar',
+                    'route'  => 'tipos.create',
                     'icon'    => 'fas fa-fw fa-file',
                 ],
             ],
